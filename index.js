@@ -9,6 +9,7 @@ const readMeTemplate = (answers) =>
 ## Description
 ${answers.description}
 ## Table of Contents
+
 1. [Description] (#description)
 2. [Installation] (#installation)
 3. [Usage] (#usage)

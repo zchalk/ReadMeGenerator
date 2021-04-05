@@ -1,0 +1,27 @@
+{
+  "name": "readmegenerator",
+  "version": "1.0.0",
+  "description": "This is a helpful application to generate a readMe for your project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zchalk/ReadMeGenerator.git"
+  },
+  "keywords": [
+    "Read",
+    "Me",
+    "Generator"
+  ],
+  "author": "Zoe Chalk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zchalk/ReadMeGenerator/issues"
+  },
+  "homepage": "https://github.com/zchalk/ReadMeGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}

@@ -86,7 +86,7 @@ const questions = [
  {
      type: 'input',
      name: 'constributing',
-     message: 'Are there any other contibutors, if so list them, if not hit enter?',
+     message: 'What does the user need to know about contributing to your project?',
  },
  {
      type: 'input',

@@ -9,13 +9,13 @@ const readMeTemplate = (answers) =>
 ## Description
 ${answers.description}
 ## Table of Contents
-1. [Description] [#description]
-2. [Installation] [#installation]
-3. [Usage] [#usage]
-4  [License] [#license]
-5. [Contributing] [#contributing]
-6. [Tests] [#tests]
-7. [Questions] [#questions]
+1. [Description] (#description)
+2. [Installation] (#installation)
+3. [Usage] (#usage)
+4  [License] (#license)
+5. [Contributing] (#contributing)
+6. [Tests] (#tests)
+7. [Questions] (#questions)
 
 <a name="installation"></a>
 ## Installation
@@ -32,7 +32,7 @@ ${answers.usage}
 ***
 ${answers.license}
 
-<a name="constributors"></a>
+<a name="constributing"></a>
 ## Contributing
 ***
 ${answers.contributing}

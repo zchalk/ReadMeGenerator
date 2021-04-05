@@ -1,55 +1,56 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 
-const readMeTemplate = (answers) => 
+
+const readMeTemplate = (answers, badgeLink) => 
 `# ${answers.title}
+
+${badgeLink}
 <a name="description"></a>
 ## Description
 ${answers.description}
 ## Table of Contents
 
-1. [Description] (#description)
-2. [Installation] (#installation)
-3. [Usage] (#usage)
-4. [License] (#license)
-5. [Contributing] (#contributing)
-6. [Tests] (#tests)
-7. [Questions] (#questions)
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
-<a name="installation"></a>
+
 ## Installation
 ***
 ${answers.installation}
 
-<a name="usage"></a>
+
 ## Usage
 ***
 ${answers.usage}
 
-<a name="license"></a>
+
 ## License
 ***
 ${answers.license}
 
-<a name="constributing"></a>
+
 ## Contributing
 ***
 ${answers.contributing}
 
-<a name="tests"></a>
+
 ## Tests
 ***
 ${answers.tests}
 
-<a name="questions"></a>
+
 ## Questions
 ***
 https://github.com/${answers.github}
 If you have further questions, suggestions, or business inquiries please contact me via email: mailto:${answers.email}
 `;
-// TODO: Create an array of questions for user input
 const questions = [
  {
      type: 'input',
@@ -98,19 +99,39 @@ const questions = [
      message: 'What is your email?',
  },   
 ];
+const badge = (license) => {
+    switch(license) {
+        case "MIT":
+         link = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+            break;
+        case "GPLv2":
+            link = "[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
+            break;
+        case "Apache":
+            link = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+            break;
+        case "LGPLv3":
+            link = "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+            break;
+        case "Unlicensed":
+            link = "";
+            break;   
+        }
 
+    return link;
+    };
 
 const writeToFile = util.promisify(fs.writeFile);
 
 async function init() {
     try {
         const answers = await inquirer.prompt(questions);
-        const template = readMeTemplate(answers);
+        const badgeLink = badge(answers.license);
+        const template = readMeTemplate(answers, badgeLink);
         writeToFile('ReadME.md', template);
     } catch (err) {
         console.log(err);
-    }
-    
-}
+    } 
+};
 
 init();

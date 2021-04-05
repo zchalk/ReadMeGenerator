@@ -4,7 +4,7 @@ const fs = require('fs');
 const util = require('util');
 
 const readMeTemplate = (answers) => 
-`<# ${answers.title}
+`# ${answers.title}
 <a name="description"></a>
 ## Description
 ${answers.description}
@@ -12,7 +12,7 @@ ${answers.description}
 1. [Description] (#description)
 2. [Installation] (#installation)
 3. [Usage] (#usage)
-4  [License] (#license)
+4. [License] (#license)
 5. [Contributing] (#contributing)
 6. [Tests] (#tests)
 7. [Questions] (#questions)

@@ -2,18 +2,20 @@
 const readMeTemplate = (answers, badgeLink) => 
 `# ${answers.title}
 
+
 ${badgeLink}
-<a name="description"></a>
+
+
 ## Description
 ${answers.description}
 ## Table of Contents
 
-* [Description](#description)
+
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributing](#contributing)
 * [Tests](#tests)
+* [Contributing](#contributing)
 * [Questions](#questions)
 
 
@@ -32,14 +34,14 @@ ${answers.usage}
 ${answers.license}
 
 
-## Contributing
-***
-${answers.contributing}
-
-
 ## Tests
 ***
 ${answers.tests}
+
+
+## Contributing
+***
+${answers.contributing}
 
 
 ## Questions

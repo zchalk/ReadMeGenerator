@@ -15,10 +15,10 @@ const questions = [
        message: 'What should the user know about installation?',
    },
    {
-       type: 'input',
-       name: 'tests',
-       message: 'What tests do you recommend to the user?',
-   },
+    type: 'input',
+    name: 'usage',
+    message: 'Is there any important usage information the user should know?',
+    },
     {
         type: 'list',
         name: 'license',
@@ -27,12 +27,12 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'usage',
-        message: 'Is there any important usage information the user should know?',
+        name: 'tests',
+        message: 'What tests do you recommend to the user?',
     },
     {
         type: 'input',
-        name: 'constributing',
+        name: 'contributing',
         message: 'What does the user need to know about contributing to your project?',
     },
     {

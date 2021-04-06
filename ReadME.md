@@ -6,6 +6,7 @@
 
 ## Description
 This application is meant to generate professional readme documents for your projects using node and inquirer.
+[Tutorial](https://drive.google.com/file/d/1M_3qUH3jvbhmCEislpCP6cBdGdCUu69l/view)
 ## Table of Contents
 
 
